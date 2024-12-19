@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ccs/main.css" />
+    <title>Valhalla Pets Shop</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="logoh"
+        src="images/logo.png"
+        alt="Logotipo de Valhalla Pets Shop"
+      />
+    </header>
+
+    <main>
+      <h1 class="titulo">Valhalla Pets Shop</h1>
+      <h2 class="titulo-2">Productos</h2>
+      <button id="productosCarrito">Carrito</button>
+
+      <div id="pantallaProductos">
+        <!-- Filtros -->
+        <div id="filtros">
+          <div>
+            <label for="inputBuscar">Buscar producto:</label>
+            <input id="inputBuscar" placeholder="Búsqueda" />
+
+            <label for="precioMinimo">Precio mínimo:</label>
+            <input id="precioMinimo" placeholder="Precio mínimo" />
+
+            <label for="precioMaximo">Precio máximo:</label>
+            <input id="precioMaximo" placeholder="Precio máximo" />
+            
+            <button id="botonBuscar">Buscar</button>
+          </div>
+
+          <label for="filtroCategorias">Categoría:</label>
+          <select name="categorias" id="filtroCategorias">
+            <option value="">Todos</option>
+            <option value="juguetes">Juguetes</option>
+            <option value="indumentaria">Indumentaria</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+
+          <label for="ordenar">Ordenar por:</label>
+          <select name="ordenar" id="ordenar">
+            <option value="">Sin ordenar</option>
+            <option value="nombreAscendente">Nombre (A-Z)</option>
+            <option value="nombreDescendente">Nombre (Z-A)</option>
+            <option value="precioAscendente">Precio (menor a mayor)</option>
+            <option value="precioDescendente">Precio (mayor a menor)</option>
+            <option value="stockAscendente">Stock (menor a mayor)</option>
+            <option value="stockDescendente">Stock (mayor a menor)</option>
+          </select>
+
+          <div>
+            <button class="botonCategoria" value="">Todos</button>
+            <button class="botonCategoria" value="juguetes">Juguetes</button>
+            <button class="botonCategoria" value="indumentaria">Indumentaria</button>
+            <button class="botonCategoria" value="accesorios">Accesorios</button>
+          </div>
+        </div>
+
+        
+        <div id="contenedorProductos">
+          <p id="mensajeNoProductos" style="display: none;">No se encontraron productos.</p>
+        </div>
+      </div>
+
+      
+      <div class="oculta" id="pantallaCarrito">
+        <div id="carrito"></div>
+        <h3 id="total">$0</h3>
+        <button id="botonComprar">Comprar</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Valhalla Pets Shop. Todos los derechos reservados.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="luxonMinificado.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
